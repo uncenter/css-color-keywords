@@ -1,25 +1,30 @@
 {
-	"name": "css-color-keywords",
+	"name": "css-color-keywords-better",
 	"version": "0.0.1",
 	"description": "",
 	"scripts": {
-		"build": "tsup src/index.ts --format cjs,esm --dts --clean",
+		"build": "tsup",
 		"watch": "npm run build -- --watch src"
 	},
-	"main": "./dist/index.js",
-	"module": "./dist/index.mjs",
+	"main": "./dist/index.mjs",
 	"types": "./dist/index.d.ts",
 	"exports": {
 		".": {
-			"require": "./dist/index.js",
 			"import": "./dist/index.mjs",
 			"types": "./dist/index.d.ts"
 		}
+	},
+	"files": [
+		"./dist/*"
+	],
+	"tsup": {
+		"tsconfig": "./tsconfig.json"
 	},
 	"keywords": [],
 	"author": "uncenter (https://uncenter.dev)",
 	"license": "MIT",
 	"devDependencies": {
-		"tsup": "^7.1.0"
+		"tsup": "^7.1.0",
+		"typescript": "^5.1.6"
 	}
 }
