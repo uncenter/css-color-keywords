@@ -3,18 +3,23 @@
 	"version": "0.0.1",
 	"description": "",
 	"scripts": {
-		"build": "node ./src/index.js && prettier --write dist/*.json"
+		"build": "tsup src/index.ts --format cjs,esm --dts --clean",
+		"watch": "npm run build -- --watch src"
 	},
-	"type": "module",
-	"main": "dist/index.js",
+	"main": "./dist/index.js",
+	"module": "./dist/index.mjs",
+	"types": "./dist/index.d.ts",
+	"exports": {
+		".": {
+			"require": "./dist/index.js",
+			"import": "./dist/index.mjs",
+			"types": "./dist/index.d.ts"
+		}
+	},
 	"keywords": [],
 	"author": "uncenter (https://uncenter.dev)",
 	"license": "MIT",
 	"devDependencies": {
-		"@types/node": "^20.4.5"
-	},
-	"dependencies": {
-		"linkedom": "^0.15.1",
-		"prettier": "^3.0.0"
+		"tsup": "^7.1.0"
 	}
 }
