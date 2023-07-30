@@ -1,0 +1,20 @@
+{
+	"name": "css-color-keywords",
+	"version": "0.0.1",
+	"description": "",
+	"scripts": {
+		"build": "node ./src/index.js && prettier --write dist/*.json"
+	},
+	"type": "module",
+	"main": "dist/index.js",
+	"keywords": [],
+	"author": "uncenter (https://uncenter.dev)",
+	"license": "MIT",
+	"devDependencies": {
+		"@types/node": "^20.4.5"
+	},
+	"dependencies": {
+		"linkedom": "^0.15.1",
+		"prettier": "^3.0.0"
+	}
+}
