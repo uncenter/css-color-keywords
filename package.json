@@ -14,7 +14,8 @@
 	"license": "MIT",
 	"scripts": {
 		"build": "tsup",
-		"watch": "npm run build -- --watch src"
+		"watch": "pnpm run build -- --watch src",
+		"format": "prettier --write ."
 	},
 	"main": "./dist/index.mjs",
 	"types": "./dist/index.d.mts",
@@ -31,6 +32,7 @@
 		"tsconfig": "./tsconfig.json"
 	},
 	"devDependencies": {
+		"prettier": "^3.0.2",
 		"tsup": "^7.2.0",
 		"typescript": "^5.1.6"
 	}
