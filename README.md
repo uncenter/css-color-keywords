@@ -14,15 +14,9 @@ This list contains all CSS color keywords specified in:
 ## Installation
 
 ```sh
-npm install css-color-keywords-better
-```
-
-```sh
-yarn add css-color-keywords-better
-```
-
-```sh
+npm i css-color-keywords-better
 pnpm add css-color-keywords-better
+yarn add css-color-keywords-better
 ```
 
 ## Usage
@@ -34,11 +28,11 @@ import { colorsByName, colorsByHex } from 'css-color-keywords-better';
 This package has no default export. It provides two typed objects containing the colors and keywords, `colorsByHex` and `colorsByName`.
 
 ```js
-console.log(colorsByHex) //  { '#F0F8FF': ['AliceBlue'], ... }
-console.log(colorsByName) // { AliceBlue: '#F0F8FF', ... }
+console.log(colorsByHex); //  { '#f0f8ff': [ 'aliceblue' ], ... }
+console.log(colorsByName); // { aliceblue: '#f0f8ff', ... }
 ```
 
-You can also grab two helper functions, `getHexForName` and `getNamesForHex`, for increased case-insensitivity:
+You can also grab two helper functions, `getHexForName` and `getNamesForHex`, for better case-insensitivity:
 
 ```js
 import {
@@ -49,22 +43,22 @@ import {
 } from 'css-color-keywords-better';
 
 // ✅ Case-insensitive with helper functions:
-getHexForName('aLiCeBlUe') // #f0f8ff
-getNamesForHex('#A9A9A9')  // [ 'darkgray', 'darkgrey' ]
+getHexForName('aLiCeBlUe'); // #f0f8ff
+getNamesForHex('#A9A9A9'); // [ 'darkgray', 'darkgrey' ]
 
 // ✅ Graceful handling of misspellings or invalid inputs:
-getHexForName('fakecolor')   // null
-getNamesForHex('#NotAColor') // []
+getHexForName('fakecolor'); // null
+getNamesForHex('#NotAColor'); // []
 
 // ⚠️ Case-sensitive bracket/dot notation (must be lowercase):
-colorsByName['aliceblue']    // #f0f8ff
-colorsByName.aliceblue       // #f0f8ff
-colorsByHex['#a9a9a9']       // [ 'darkgray', 'darkgrey' ]
+colorsByName['aliceblue']; // #f0f8ff
+colorsByName.aliceblue; // #f0f8ff
+colorsByHex['#a9a9a9']; // [ 'darkgray', 'darkgrey' ]
 
 // ⚠️ No handling of misspellings or invalid inputs (undefined!):
-colorsByName['fakecolor']    // undefined
-colorsByName.fakecolor;      // undefined
-colorsByHex['#NotAColor'];   // undefined
+colorsByName['fakecolor']; // undefined
+colorsByName.fakecolor; // undefined
+colorsByHex['#NotAColor']; // undefined
 ```
 
 ## License
