@@ -1,7 +1,17 @@
 {
 	"name": "css-color-keywords-better",
 	"version": "0.1.0",
-	"description": "",
+	"description": "An ESM-only type-annotated list of all CSS color keywords.",
+	"author": "uncenter (https://uncenter.dev)",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/uncenter/markdown-it-kbd-better.git"
+	},
+	"keywords": [
+		"css",
+		"colors"
+	],
+	"license": "MIT",
 	"scripts": {
 		"build": "tsup",
 		"watch": "npm run build -- --watch src"
@@ -20,11 +30,8 @@
 	"tsup": {
 		"tsconfig": "./tsconfig.json"
 	},
-	"keywords": [],
-	"author": "uncenter (https://uncenter.dev)",
-	"license": "MIT",
 	"devDependencies": {
-		"tsup": "^7.1.0",
+		"tsup": "^7.2.0",
 		"typescript": "^5.1.6"
 	}
 }
